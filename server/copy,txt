@@ -1,0 +1,30 @@
+curl -X POST "http://0.0.0.0:8001/auth/register" -H "Content-Type: application/json" -d '{"email":"tsukada-t@aqsh.co.jp", "password": "ttgl37tt"}'
+
+curl -X POST "http://0.0.0.0:8001/auth/token" -H "Content-Type: application/x-www-form-urlencoded" -d "username=tsukada-t@aqsh.co.jp&password=ttgl37tt"
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0c3VrYWRhLXRAYXFzaC5jby5qcCIsImV4cCI6MTc2MDc3ODUzM30.QmbI6R50ceJuuwfv56IU3mGUd536CxLEQ_rUthN7V6E
+
+curl -X POST "http://0.0.0.0:8001/big-rocks/" -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0c3VrYWRhLXRAYXFzaC5jby5qcCIsImV4cCI6MTc2MDc2MzAyN30.TDe3-efWLgecc-EmOmWqs9Q1zBi86RPyJ0z9Pt8wC74" -H "Content-Type: application/json" -d '{"vision_board": {"title": "健康的な身体を手に入れる","images": [],"affirmations": "私は毎日健康になり、活力がみなぎっています。"},"status": "todo"}'
+
+
+curl -X POST "http://0.0.0.0:8001/impulse-logs/" -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0c3VrYWRhLXRAYXFzaC5jby5qcCIsImV4cCI6MTc2MDc2NDUzN30.m_hDtDI8XjFAqC0aSMKlmg9s6sX5N6bS6W2LN4IjQHI" -H "Content-Type: application/json" -d '{"resisted": true,"journal": "衝動に抵抗できた！Big Rocksを思い出したからだ。"}'
+
+curl -X POST "http://0.0.0.0:8001/challenges/" -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0c3VrYWRhLXRAYXFzaC5jby5qcCIsImV4cCI6MTc2MDc2Njg2Nn0.iVnrnLeQQDM_Scm8PKl4Y8KoMSe2YI_MxMwLilHgLE8" -H "Content-Type: application/json" -d '{"title": "毎日30分読書","description": "知識を深め、思考力を高めるためのチャレンジ","category": "自己成長","discomfort_level": 2}'
+
+curl -X POST "http://0.0.0.0:8001/completed-challenges/" -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0c3VrYWRhLXRAYXFzaC5jby5qcCIsImV4cCI6MTc2MDc2Njg2Nn0.iVnrnLeQQDM_Scm8PKl4Y8KoMSe2YI_MxMwLilHgLE8" -H "Content-Type: application/json" -d '{"challenge_id": "579a9c32-ae57-4ba2-9ceb-6debf883ac7e","user_discomfort_level": 3,"accomplishment": 5,"takeaway": "新しい知識を得る喜びを感じた。"}'
+
+curl -X POST "http://0.0.0.0:8001/routines/" -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0c3VrYWRhLXRAYXFzaC5jby5qcCIsImV4cCI6MTc2MDc2OTA5MH0.6zVZRfML3mBY9orQDnE7o91WMoC7oydPZG2do4JQia4" -H "Content-Type:application/json" -d '{"name": "朝のルーティン","blocks": [{"title": "瞑想", "duration": 10, "order": 1},{"title": "ストレッチ", "duration": 15, "order": 2}],"discipline_mode": {"enabled": true, "time": "07:00", "window": 15}}'
+
+curl -X POST "http://0.0.0.0:8001/bad-habits/" -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0c3VrYWRhLXRAYXFzaC5jby5qcCIsImV4cCI6MTc2MDc3MDg3OX0.AlT2pLH0G-kOsr3_C0KMIQtgI71FL5Bui5_QdW4lvrI" -H "Content-Type:application/json" -d '{"name": "SNSのダラダラ見","trigger_text": "退屈な時","replacement_action": "1分間瞑想する"}'
+
+7d906320-72f8-46f9-9f41-043fc795036d
+
+curl -X POST "http://0.0.0.0:8001/bad-habits/7d906320-72f8-46f9-9f41-043fc795036d/logs" -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0c3VrYWRhLXRAYXFzaC5jby5qcCIsImV4cCI6MTc2MDc3MTQzN30.9vZxn_-Wa1ByeoOdqIa0MIKP_MwBb5cuuzBKVJBMAUk" -H "Content-Type: application/json" -d '{"resisted": true}'
+
+curl -X POST "http://0.0.0.0:8001/journal-entries/" -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0c3VrYWRhLXRAYXFzaC5jby5qcCIsImV4cCI6MTc2MDc3NzU3M30.PmyQzPu-7UeE8KAOcSEKVeuKeUDiKuFxKB36p6qioEI" -H "Content-Type: application/json" -d '{"entry_type": "free","content": {"title": "今日の出来事","content": "今日は新しいAPIエンドポイントをたくさん作った。","impactful_event": "すべてのCRUDが完成したこと","emotions_felt": "達成感","reasoning": "努力が実を結んだから"}}'
+
+c1f36a5e-3b32-4c88-b009-0ac6da9d796d
+
+curl -X POST "http://0.0.0.0:8001/shadow-journal-entries/" -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0c3VrYWRhLXRAYXFzaC5jby5qcCIsImV4cCI6MTc2MDc3ODUzM30.QmbI6R50ceJuuwfv56IU3mGUd536CxLEQ_rUthN7V6E" -H "Content-Type: application/json" -d '{"entry_type": "daily_journey","content": {"day": 1,"answers": [{"question": "あなたが他人から隠そうとしている自分の一部は何ですか？", "answer": "完璧主義なところ"},{"question": "それはなぜですか？", "answer": "弱みを見せたくないから"}]}}'
+
+curl -X POST "http://0.0.0.0:8001/beliefs/" -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0c3VrYWRhLXRAYXFzaC5jby5qcCIsImV4cCI6MTc2MDc3NzU3M30.PmyQzPu-7UeE8KAOcSEKVeuKeUDiKuFxKB36p6qioEI" -H "Content-Type: application/json" -d '{"original_text": "私は完璧でなければならない","rewritten_text": "私は成長の過程にあり、不完全でも価値がある","status": "rewritten","source_journal_day": 1}'
